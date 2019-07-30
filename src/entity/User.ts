@@ -8,6 +8,7 @@ import {
 } from 'typeorm';
 import {ObjectType, ID, Field, Root} from 'type-graphql';
 import {SpotifyAccount} from './SpotifyAccount';
+import {Playing} from './Playing';
 
 @ObjectType()
 @Entity()
@@ -40,7 +41,11 @@ export class User extends BaseEntity {
   @Column('text', {unique: true})
   username: string;
 
-  @OneToOne(() => SpotifyAccount)
+  @OneToOne(() => SpotifyAccount, (sa) => sa.user)
   @JoinColumn()
-  spotifyAccount: SpotifyAccount;
+  spotifyAccount: Promise<SpotifyAccount>;
+
+  @OneToOne(() => Playing, (p) => p.user)
+  @JoinColumn()
+  playing: Promise<Playing>;
 }

@@ -4,10 +4,15 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "@types/cookie-parser": "^1.4.1",
+    "@types/request": "^2.48.1",
+    "@types/request-promise-native": "^1.0.16",
+    "@types/uuid": "^3.4.5",
     "apollo-server-express": "^2.3.1",
     "bcryptjs": "^2.4.3",
     "class-validator": "^0.9.1",
     "connect-redis": "^3.4.1",
+    "cookie-parser": "^1.4.4",
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "express-session": "^1.16.2",
@@ -16,8 +21,13 @@
     "pg": "^7.7.1",
     "prettier": "^1.18.2",
     "reflect-metadata": "^0.1.12",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.7",
+    "spotify-web-api-node": "^4.0.0",
     "type-graphql": "^0.16.0",
-    "typeorm": "^0.2.11"
+    "typeorm": "^0.2.11",
+    "url": "^0.11.0",
+    "uuid": "^3.3.2"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
@@ -28,10 +38,11 @@
     "@types/graphql": "^14.0.4",
     "@types/ioredis": "^4.0.12",
     "@types/node": "^10.12.18",
+    "@types/spotify-web-api-node": "^4.0.0",
     "nodemon": "^1.18.9",
     "ts-node": "^7.0.1",
     "ts-node-dev": "^1.0.0-pre.32",
-    "typescript": "^3.2.2"
+    "typescript": "^3.5.3"
   },
   "scripts": {
     "start": "ts-node-dev --respawn src/index.ts"
